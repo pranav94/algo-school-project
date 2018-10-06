@@ -17,10 +17,6 @@ insert_val_and_shift_right(int i, int val, int Best[], int K) {
         Best[m] = Best[m-1];
     }
     Best[i] = val;
-    // for(i=0; i<K; i++) {
-    //     printf("%d, ", Best[i]);
-    // }
-    // printf("\n");
 }
 
 add_item_to_best(int val, int Best[], int K) {
