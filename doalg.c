@@ -53,12 +53,12 @@ update_best(int val, int Best[], int K) {
     *   K: The max size of the array
     * 
     */
-    int i = 0;
-    while(i <= K - 1 && COMPARE(Best[i], val) == 1) {
-        i++;
+    int i = K -1;
+    while(i >= 0 && COMPARE(Best[i], val) == 2) {
+        i--;
     }
-    if (i <= K -1) {
-        insert_val_and_shift_right(i, val, Best, K);
+    if (i != K -1) {
+        insert_val_and_shift_right(i+1, val, Best, K);
     }
 }
 
