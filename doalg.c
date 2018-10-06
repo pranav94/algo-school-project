@@ -67,6 +67,8 @@ update_best(int val, int Best[], int K) {
 }
 
 doalg(int n, int K, int Best[]) {
+
+    memset(Best, 0, sizeof Best);
     int i, j;
     // Insert first k items into Best in a reverse sorted fashion.
     for(i=1; i<= K; i++) {
