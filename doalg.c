@@ -1,4 +1,4 @@
-#include <string.h>;
+#include <string.h>
 #define MAXK 100
 
 void insert_val_and_shift_right(int index, int val, int Best[], int K) {
@@ -41,12 +41,13 @@ int doalg(int n, int K, int Best[]) {
 
     // Iterate through all the items and insert to Best if required.
     for (i = K + 1; i <= n; i++) {
+        // If the item is smaller than our smallest Best element, ignore and continue.
         if (COMPARE(Best[K - 1], i) == 1)
             continue;
         int insert_index = bin_ins(0, K - 1, i, Best);
         insert_val_and_shift_right(insert_index, i, Best, K);
     }
 
-	return 1;
+    return 1;
 
 }
