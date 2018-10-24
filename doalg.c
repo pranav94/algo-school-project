@@ -36,12 +36,12 @@ int doalg(int n, int K, int Best[]) {
     }
 
     // Iterate through all the items and insert to Best if 
-	// the item is bigger than the smallest Best element.
+    // the item is bigger than the smallest Best element.
     for (item = K + 1; item <= n; item++) {
         if (COMPARE(Best[K - 1], item) == 2) {
-			int insert_index = bin_ins(0, K - 1, item, Best);
-			insert_val_and_shift_right(insert_index, item, Best, K);
-		}
+            int insert_index = bin_ins(0, K - 1, item, Best);
+            insert_val_and_shift_right(insert_index, item, Best, K);
+        }
     }
 
     return 1;
