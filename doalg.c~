@@ -45,10 +45,27 @@ insert_val_and_shift_right(i, val, Best, K);
 
 int bin_ins(int i, int j, int val, int Best[])
 {	
-/* 
-* Function: bin_ins: Returns the index for incoming element to be inserted 
-* ----------------------------
-*/
+	/*if(i<=j)
+	{
+		//if(i==j)
+		//	return i;
+		int mid = (i+j)/2;
+		if(COMPARE(Best[mid], val)==2 && COMPARE(Best[i],val)==1)
+			return bin_ins(i,mid-1,val,Best);
+		if(COMPARE(Best[mid], val)==1 && COMPARE(Best[j],val)==2)			
+			return bin_ins(mid+1,j,val,Best);		
+		if(COMPARE(Best[i], val)==2)
+			return i;		
+		if(COMPARE(Best[j], val)==1)
+			return j+1;
+		if(COMPARE(Best[mid], val)==2 && COMPARE(Best[mid-1], val)==1)	
+			return mid;
+		
+		if(COMPARE(Best[mid], val)==1 && COMPARE(Best[mid+1], val)==2 )
+			return mid+1;
+	}
+	//return i;*/
+
 	if(i==j)
 	return i;
 	int mid = i + (j-i)/2;
